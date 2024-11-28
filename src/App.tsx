@@ -5,9 +5,13 @@ import { useState } from 'react';
 import viteLogo from '/vite.svg';
 
 import reactLogo from './assets/react.svg';
+import { useNowPlayingMovies } from './hooks/movie';
 
 function App() {
   const [count, setCount] = useState(0);
+  const { data } = useNowPlayingMovies(1);
+
+  console.log('THEDATA', data);
 
   return (
     <>
