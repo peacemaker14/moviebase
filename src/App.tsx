@@ -1,41 +1,22 @@
-import './App.css';
+import { Redirect, Route, Switch } from 'wouter';
 
-import { useState } from 'react';
-
-import viteLogo from '/vite.svg';
-
-import reactLogo from './assets/react.svg';
-import { useNowPlayingMovies } from './hooks/movie';
+import Layout from './components/Layout';
+import NowPlayingPage from './pages/NowPlayingPage';
+import PopularPage from './pages/PopularPage';
+import TopRatedPage from './pages/TopRatedPage';
+import UpcomingPage from './pages/UpcomingPage';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const { data } = useNowPlayingMovies(1);
-
-  console.log('THEDATA', data);
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Layout>
+      <Switch>
+        <Route path="/" component={() => <Redirect to="/now-playing" />} />
+        <Route path="/now-playing" component={NowPlayingPage} />
+        <Route path="/popular" component={PopularPage} />
+        <Route path="/top-rated" component={TopRatedPage} />
+        <Route path="/upcoming" component={UpcomingPage} />
+      </Switch>
+    </Layout>
   );
 }
 
