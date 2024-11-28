@@ -10,25 +10,25 @@ import {
 } from '../api/movie';
 import { MovieDetails, MovieListResponse } from '../types/movie';
 
-export const useNowPlayingMovies = (page: number) =>
+export const useNowPlayingMovies = (page?: number) =>
   useQuery<MovieListResponse, Error>({
     queryKey: ['now_playing', page],
     queryFn: () => fetchNowPlaying(page),
   });
 
-export const usePopularMovies = (page: number) =>
+export const usePopularMovies = (page?: number) =>
   useQuery<MovieListResponse, Error>({
     queryKey: ['popular', page],
     queryFn: () => fetchPopular(page),
   });
 
-export const useTopRatedMovies = (page: number) =>
+export const useTopRatedMovies = (page?: number) =>
   useQuery<MovieListResponse, Error>({
     queryKey: ['top_rated', page],
     queryFn: () => fetchTopRated(page),
   });
 
-export const useUpcomingMovies = (page: number) =>
+export const useUpcomingMovies = (page?: number) =>
   useQuery<MovieListResponse, Error>({
     queryKey: ['upcoming', page],
     queryFn: () => fetchUpcoming(page),
@@ -41,7 +41,7 @@ export const useMovieDetails = (id: string) =>
     enabled: !!id,
   });
 
-export const useSearchMovies = (query: string, page: number) =>
+export const useSearchMovies = (query: string, page?: number) =>
   useQuery<MovieListResponse, Error>({
     queryKey: ['search_movies', query, page],
     queryFn: () => fetchSearchMovies(query, page),

@@ -2,16 +2,26 @@
 import { MovieDetails, MovieListResponse } from '../types/movie';
 import { fetcher } from '../utils/fetcher';
 
-export const fetchNowPlaying = (page: number): Promise<MovieListResponse> =>
+const defaultPage = 1;
+
+export const fetchNowPlaying = (
+  page: number = defaultPage
+): Promise<MovieListResponse> =>
   fetcher({ endpoint: '/movie/now_playing', params: { page } });
 
-export const fetchPopular = (page: number): Promise<MovieListResponse> =>
+export const fetchPopular = (
+  page: number = defaultPage
+): Promise<MovieListResponse> =>
   fetcher({ endpoint: '/movie/popular', params: { page } });
 
-export const fetchTopRated = (page: number): Promise<MovieListResponse> =>
+export const fetchTopRated = (
+  page: number = defaultPage
+): Promise<MovieListResponse> =>
   fetcher({ endpoint: '/movie/top_rated', params: { page } });
 
-export const fetchUpcoming = (page: number): Promise<MovieListResponse> =>
+export const fetchUpcoming = (
+  page: number = defaultPage
+): Promise<MovieListResponse> =>
   fetcher({ endpoint: '/movie/upcoming', params: { page } });
 
 export const fetchMovieDetails = (id: string): Promise<MovieDetails> =>
@@ -19,6 +29,6 @@ export const fetchMovieDetails = (id: string): Promise<MovieDetails> =>
 
 export const fetchSearchMovies = (
   query: string,
-  page: number
+  page: number = defaultPage
 ): Promise<MovieListResponse> =>
   fetcher({ endpoint: '/search/movie', params: { query, page } });
