@@ -1,15 +1,20 @@
-import { Movie } from '../types/movie';
+import { useLocation } from 'wouter';
 
+import { Movie } from '../types/movie';
 interface MovieCardProps {
   movie: Movie;
 }
 
 const MovieCard = ({ movie }: MovieCardProps) => {
+  const [, setLocation] = useLocation();
   const backdropUrl = movie.backdropPath
     ? `https://image.tmdb.org/t/p/w500${movie.backdropPath}`
     : 'https://via.placeholder.com/500x281?text=No+Image';
   return (
-    <div className="rounded-lg bg-white shadow-md hover:shadow-lg transition overflow-hidden">
+    <div
+      onClick={() => setLocation(`/movie/${movie.id}`)}
+      className="cursor-pointer rounded-lg bg-white shadow-md hover:shadow-lg transition overflow-hidden"
+    >
       <div className="relative h-40">
         <img
           src={backdropUrl}

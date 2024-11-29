@@ -1,6 +1,7 @@
 import { Redirect, Route, Switch } from 'wouter';
 
 import Layout from './components/Layout';
+import MovieDetailPage from './pages/MovieDetailPage';
 import NowPlayingPage from './pages/NowPlayingPage';
 import PopularPage from './pages/PopularPage';
 import TopRatedPage from './pages/TopRatedPage';
@@ -15,6 +16,7 @@ function App() {
         <Route path="/popular" component={PopularPage} />
         <Route path="/top-rated" component={TopRatedPage} />
         <Route path="/upcoming" component={UpcomingPage} />
+        <Route path="/movie/:id" component={MovieDetailPage} />
       </Switch>
     </Layout>
   );

@@ -1,5 +1,9 @@
 // src/api/movie.ts
-import { MovieDetails, MovieListResponse } from '../types/movie';
+import {
+  CreditsResponse,
+  MovieDetails,
+  MovieListResponse,
+} from '../types/movie';
 import { fetcher } from '../utils/fetcher';
 
 const defaultPage = 1;
@@ -32,3 +36,6 @@ export const fetchSearchMovies = (
   page: number = defaultPage
 ): Promise<MovieListResponse> =>
   fetcher({ endpoint: '/search/movie', params: { query, page } });
+
+export const fetchMovieCredits = (id: string): Promise<CreditsResponse> =>
+  fetcher({ endpoint: `/movie/${id}/credits` });

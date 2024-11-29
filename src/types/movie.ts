@@ -1,4 +1,3 @@
-// src/types/movie.ts
 export interface Movie {
   id: number;
   title: string;
@@ -25,6 +24,25 @@ export interface MovieDetails extends Movie {
   status: string;
   tagline: string | null;
   revenue: number;
+}
+
+export interface Cast {
+  id: number;
+  name: string;
+  character: string;
+  profilePath: string | null;
+}
+
+export interface Crew {
+  id: number;
+  name: string;
+  job: string;
+  profilePath: string | null;
+}
+
+export interface CreditsResponse {
+  cast: Cast[];
+  crew: Crew[];
 }
 
 export type MovieListResponse = PaginatedResponse<Movie>;

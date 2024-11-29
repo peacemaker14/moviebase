@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 import {
+  fetchMovieCredits,
   fetchMovieDetails,
   fetchNowPlaying,
   fetchPopular,
@@ -8,7 +9,11 @@ import {
   fetchTopRated,
   fetchUpcoming,
 } from '../api/movie';
-import { MovieDetails, MovieListResponse } from '../types/movie';
+import {
+  CreditsResponse,
+  MovieDetails,
+  MovieListResponse,
+} from '../types/movie';
 
 export const useNowPlayingMovies = (page?: number) =>
   useQuery<MovieListResponse, Error>({
@@ -46,4 +51,11 @@ export const useSearchMovies = (query: string, page?: number) =>
     queryKey: ['search_movies', query, page],
     queryFn: () => fetchSearchMovies(query, page),
     enabled: !!query,
+  });
+
+export const useMovieCredits = (id: string) =>
+  useQuery<CreditsResponse, Error>({
+    queryKey: ['movieCredits', id],
+    queryFn: () => fetchMovieCredits(id),
+    enabled: !!id,
   });
