@@ -36,6 +36,6 @@ describe('CategoryPageContainer', () => {
     );
 
     const containerElement = screen.getByText('Styled Content').parentElement;
-    expect(containerElement).toHaveClass('pt-20');
+    expect(containerElement).toHaveClass('pt-40');
   });
 });
