@@ -1,4 +1,4 @@
-import mapToCamelCase from './caseConverter';
+import mapToCamelCase from '../case-converter';
 
 const BASE_URL = import.meta.env.VITE_TMDB_BASE_URL;
 const AUTH_TOKEN = import.meta.env.VITE_TMDB_AUTH_TOKEN;

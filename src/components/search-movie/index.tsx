@@ -7,8 +7,8 @@ import {
 import { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
 
-import { useSearchMovies } from '../hooks/movie';
-import { Movie } from '../types/movie';
+import { useSearchMovies } from '../../hooks/movie';
+import { Movie } from '../../types/movie';
 
 const SearchMovie = () => {
   const [search, setSearch] = useState<string>('');

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import CategoryPageContainer from '../components/CategoryPageContainer';
-import MovieCardList from '../components/MovieCardList';
-import { usePopularMovies } from '../hooks/movie';
+import CategoryPageContainer from '../../components/category-page-container';
+import MovieCardList from '../../components/movie-card-list';
+import { usePopularMovies } from '../../hooks/movie';
 
 const PopularPage = () => {
   const [page, setPage] = useState<number>(1);

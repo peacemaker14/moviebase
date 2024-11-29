@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'wouter';
 
-import SearchMovie from './SearchMovie';
+import SearchMovie from '../search-movie';
 
 const Navbar = () => {
   const [location] = useLocation(); // Get the current route

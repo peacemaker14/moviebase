@@ -1,11 +1,11 @@
 import { Redirect, Route, Switch } from 'wouter';
 
-import Layout from './components/Layout';
-import MovieDetailPage from './pages/MovieDetailPage';
-import NowPlayingPage from './pages/NowPlayingPage';
-import PopularPage from './pages/PopularPage';
-import TopRatedPage from './pages/TopRatedPage';
-import UpcomingPage from './pages/UpcomingPage';
+import Layout from './components/layout';
+import MovieDetailPage from './pages/movie-detail-page';
+import NowPlayingPage from './pages/now-playing-page';
+import PopularPage from './pages/popular-page';
+import TopRatedPage from './pages/top-rated-page';
+import UpcomingPage from './pages/upcoming-page';
 
 function App() {
   return (

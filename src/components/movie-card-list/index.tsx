@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-import { Movie } from '../types/movie';
-import MovieCard from './MovieCard';
+import { Movie } from '../../types/movie';
+import MovieCard from '../movie-card';
 
 interface MovieCardListProps {
   movies: Movie[];

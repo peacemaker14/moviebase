@@ -35,7 +35,7 @@ export default tseslint.config(
   },
   eslintPluginPrettierRecommended,
   {
-    files: ['src/utils/*.{ts,tsx}'],
+    files: ['src/utils/**/*.{ts,tsx}'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'warn',
     },

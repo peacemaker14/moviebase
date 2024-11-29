@@ -1,10 +1,9 @@
-// src/api/movie.ts
 import {
   CreditsResponse,
   MovieDetails,
   MovieListResponse,
-} from '../types/movie';
-import { fetcher } from '../utils/fetcher';
+} from '../../types/movie';
+import { fetcher } from '../../utils/fetcher';
 
 const defaultPage = 1;
 

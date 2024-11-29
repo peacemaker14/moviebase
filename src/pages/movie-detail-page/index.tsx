@@ -1,7 +1,7 @@
 import { useParams } from 'wouter';
 import { useLocation } from 'wouter';
 
-import { useMovieCredits, useMovieDetails } from '../hooks/movie';
+import { useMovieCredits, useMovieDetails } from '../../hooks/movie';
 
 const MovieDetailPage = () => {
   const { id } = useParams<{ id: string }>();
