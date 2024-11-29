@@ -29,6 +29,7 @@ const SearchMovie = () => {
       <Combobox<Movie | undefined>
         onChange={(value) => {
           if (value?.id) {
+            setSearch('');
             setLocation(`/movie/${value?.id}`);
           }
         }}

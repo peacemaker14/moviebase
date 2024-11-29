@@ -10,7 +10,7 @@ const CategoryPageContainer = ({
   title,
 }: CategoryPageContainerProps) => {
   return (
-    <div className="pt-20">
+    <div className="pt-40 md:pt-20">
       <h1 className="text-2xl font-bold mb-6 text-slate-900">{title}</h1>
       {children}
     </div>

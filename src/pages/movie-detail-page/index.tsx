@@ -40,7 +40,7 @@ const MovieDetailPage = () => {
   const director = credits.crew.find((person) => person.job === 'Director');
 
   return (
-    <div className="container mx-auto px-4 pb-6 pt-24">
+    <div className="container mx-auto px-4 pb-6 pt-40 md:pt-24">
       <div className="flex flex-col lg:flex-row items-start">
         <div className="w-full lg:w-1/3 relative">
           <button
