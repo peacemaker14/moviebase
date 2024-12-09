@@ -6,6 +6,7 @@ import tseslint from 'typescript-eslint';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import prettier from 'eslint-plugin-prettier';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import vitest from 'eslint-plugin-vitest';
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -21,9 +22,11 @@ export default tseslint.config(
       'react-refresh': reactRefresh,
       'simple-import-sort': simpleImportSort,
       prettier,
+      vitest,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      ...vitest.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
