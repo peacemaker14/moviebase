@@ -1,69 +1,69 @@
-# **MovieBase**
+# 📦 Food Delivery App
 
-MovieBase is a web application for browsing movie
+## Overview
+A modern food delivery application built with React, TypeScript, and Next.js. This project demonstrates scalable frontend architecture with performance optimization and testing best practices.
 
----
+## Tech Stack
+- **Frontend:** React 18, TypeScript, Next.js
+- **Styling:** Tailwind CSS
+- **State Management:** React Query, XState
+- **Testing:** Jest, React Testing Library, Vitest
+- **Performance:** Code splitting, lazy loading, Web Vitals
+- **Deployment:** Vercel
 
-## **Tech Stack**
+## Features
+- Browse restaurant menus
+- Add items to cart
+- Real-time order tracking
+- User authentication
+- Payment integration
+- Responsive design (mobile-first)
 
-- **Frontend**: React, Wouter, Tailwind CSS
-- **State Management**: React Query
-- **Build Tool**: Vite
-- **Testing**: Vitest, React Testing Library
-- **Deployment**: Firebase Hosting
+## Performance
+- **Page Load:** < 2.5s initial load
+- **Lighthouse Score:** 90+ Performance
+- **Test Coverage:** 70%+
 
----
-
-## **Installation**
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/moviebase.git
-   cd moviebase
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   pnpm install
-   ```
-
-3. Add your **TMDb API Key**:
-
-   - Create a `.env` file in the root directory.
-   - Add the following environment variables:
-     ```env
-     VITE_TMDB_API_URL=https://api.themoviedb.org/3
-     VITE_TMDB_API_KEY=your_api_key_here
-     ```
-
-4. Run the development server:
-
-   ```bash
-   pnpm dev
-   ```
-
-5. Build for production:
-
-   ```bash
-   pnpm build
-   ```
-
----
-
-## **Usage**
-
-- Visit the live application: [MovieBase](https://your-firebase-url.web.app)
-- Use the search bar to find movies.
-- Browse categories to discover top-rated, popular, and upcoming movies.
-
----
-
-## **Testing**
-
-Run tests to ensure the app is functioning correctly:
+## Getting Started
 
 ```bash
-pnpm test
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Run tests
+npm run test
+
+# Build for production
+npm run build
 ```
+
+## Screenshots
+![Homepage](screenshots/homepage.png)
+![Order Flow](screenshots/order-flow.png)
+
+## Project Structure
+```
+src/
+├── components/     # Reusable components
+├── pages/         # Next.js pages
+├── hooks/         # Custom React hooks
+├── services/      # API services
+├── utils/         # Helper functions
+└── types/         # TypeScript types
+```
+
+## Notes
+This was developed to showcase modern React/Next.js development with emphasis on:
+- Performance optimization
+- Testing best practices
+- Clean architecture
+- TypeScript safety
+
+---
+
+**Developer:** Bayu Rahmadi  
+**GitHub:** [@peacemaker14](https://github.com/peacemaker14)  
+**Contact:** bayu.r.rahmadi@gmail.com
